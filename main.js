@@ -1,7 +1,7 @@
 const produtos = [
-  { nome: "Vestido Floral", imagem: "vestido1.jpg" },
-  { nome: "Blusa Social", imagem: "blusa1.jpg" },
-  { nome: "Conjunto Feminino", imagem: "conjunto1.jpg" }
+  { nome: "Vestido em Chamise", imagem: "Vestido em Chamise.jpg",},
+  { nome: "Vestido Chamise", imagem: "Vestido Chamise.jpg" },
+  { nome: "Vestido xadrez em viscolinho", imagem: "Vestido xadrez em viscolinho.jpg" }
 ];
 
 const container = document.getElementById("produtos-container");
