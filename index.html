@@ -2,59 +2,49 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vest Modas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vest Modas - Início</title>
   <link rel="stylesheet" href="main.css" />
 </head>
 <body>
-  <header>
-    <!-- Logo com link para a página inicial, melhora usabilidade -->
-    <a href="#" aria-label="Página inicial Vest Modas">
-      <img src="LogoMarca.jpg" alt="Logo Vest Modas" class="logo" />
-    </a>
 
-    <nav aria-label="Menu principal">
+  <header>
+    <img src="LogoMarca.jpg" alt="Logo Vest Modas" class="logo" />
+    <nav>
       <ul>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="index.html" class="active">Início</a></li>
+        <li><a href="vestidos.html">Vestidos</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section id="sobre">
+  <section id="inicio">
+    <div class="intro-text">
       <h1>Moda que Inspira</h1>
       <p>Na Vest Modas, você encontra peças que refletem estilo, elegância e autenticidade.</p>
-    </section>
+    </div>
+    <div class="entrada">
+      <img src="Vestido midi em viscolinho.jpeg" alt="Vestido 1 - Entrada" />
+      <img src="Vestido eu escolhinho com lastex nas costas.jpeg" alt="Vestido 2 - Entrada" />
+    </div>
+  </section>
 
-    <section id="catalogo" aria-label="Catálogo de Vestidos">
-      <h2>Vestidos em Loja</h2>
-      <div class="produtos" id="produtos-container">
-        <!-- Vestidos carregados via JS -->
-      </div>
-    </section>
-
-    <section id="contato">
-      <h2>Fale Conosco</h2>
-      <p>Entre em contato com a gente para saber mais sobre nossos vestidos:</p>
-
-      <div class="contato-links">
-        <a href="https://wa.me/5527995309811" target="_blank" rel="noopener" class="whatsapp-button" aria-label="Fale conosco pelo WhatsApp">
-          <img src="whatsapp.png" width="20" height="20" alt="Ícone WhatsApp" /> Fale no WhatsApp
-        </a>
-
-        <a href="https://www.instagram.com/_vest_modas/" target="_blank" rel="noopener" class="instagram-button" aria-label="Siga no Instagram">
-          <img src="instagram.png" width="20" height="20" alt="Ícone Instagram" /> Siga no Instagram
-        </a>
-      </div>
-    </section>
-  </main>
+  <section id="contato">
+    <h2>Fale Conosco</h2>
+    <div class="contato-links">
+      <a href="https://wa.me/5527998620942" class="whatsapp-button" target="_blank">
+        <img src="whatsapp.png" alt="WhatsApp" /> WhatsApp
+      </a>
+      <a href="https://instagram.com/sua_loja" class="instagram-button" target="_blank">
+        <img src="instagram.png" alt="Instagram" /> Instagram
+      </a>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 Vest Modas. Todos os direitos reservados.</p>
   </footer>
 
-  <script src="main.js"></script>
 </body>
 </html>

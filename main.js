@@ -1,4 +1,4 @@
-// Array de produtos — você pode expandir facilmente depois
+// Array de produtos — pode adicionar/remover facilmente
 const produtos = [
   { nome: "Vestido em Chamise", imagem: "Vestido em Chamise.jpg" },
   { nome: "Vestido Chamise", imagem: "Vestido Chamise.jpg" },
@@ -14,12 +14,11 @@ const produtos = [
   { nome: "Blazer", imagem: "Blazer.jpeg" },
 ];
 
-// Função para criar um card de produto
+// Cria um card para cada produto
 function criarCardProduto(produto) {
   const card = document.createElement("div");
   card.className = "card";
 
-  // Usar createElement para evitar possíveis ataques XSS (segurança)
   const img = document.createElement("img");
   img.src = produto.imagem;
   img.alt = produto.nome;
@@ -33,7 +32,7 @@ function criarCardProduto(produto) {
   return card;
 }
 
-// Função para carregar os produtos no container
+// Carrega produtos no container da página
 function carregarProdutos(produtos, containerId) {
   const container = document.getElementById(containerId);
   if (!container) {
@@ -41,8 +40,7 @@ function carregarProdutos(produtos, containerId) {
     return;
   }
 
-  // Limpa o conteúdo antes de carregar, caso queira recarregar depois
-  container.innerHTML = "";
+  container.innerHTML = ""; // limpa antes
 
   produtos.forEach(produto => {
     const card = criarCardProduto(produto);
@@ -50,5 +48,5 @@ function carregarProdutos(produtos, containerId) {
   });
 }
 
-// Chamada da função para carregar os produtos
+// Chamada inicial para mostrar os produtos na página
 carregarProdutos(produtos, "produtos-container");

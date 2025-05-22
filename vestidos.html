@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vest Modas - Vestidos</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+
+  <header>
+    <img src="LogoMarca.jpg" alt="Logo Vest Modas" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="vestidos.html" class="active">Vestidos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="vestidos">
+    <h2>Vestidos da Coleção</h2>
+    <div id="produtos-container" class="produtos"></div>
+  </section>
+
+  <section id="contato">
+    <h2>Fale Conosco</h2>
+    <div class="contato-links">
+      <a href="https://wa.me/5527998620942" class="whatsapp-button" target="_blank">
+        <img src="whatsapp.png" alt="WhatsApp" /> WhatsApp
+      </a>
+      <a href="https://instagram.com/sua_loja" class="instagram-button" target="_blank">
+        <img src="instagram.png" alt="Instagram" /> Instagram
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Vest Modas. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Array de produtos — você pode expandir depois
+    const produtos = [
+      { nome: "Vestido em Chamise", imagem: "Vestido em Chamise.jpg" },
+      { nome: "Vestido Chamise", imagem: "Vestido Chamise.jpg" },
+      { nome: "Vestido xadrez em viscolinho", imagem: "Vestido xadrez em viscolinho.jpg" },
+      { nome: "Vestido", imagem: "Vestido.jpeg" },
+      { nome: "Vestido eu escolhinho com lastex nas costas", imagem: "Vestido eu escolhinho com lastex nas costas.jpeg" },
+      { nome: "Vestido midi em viscolinho", imagem: "Vestido midi em viscolinho.jpeg" },
+      { nome: "Cardigan em tricô", imagem: "Cardigan em tricô.jpeg" },
+      { nome: "Vestido em viscose", imagem: "Vestido em viscose.jpeg" },
+      { nome: "Cardigan em tricô", imagem: "Cardigan em tricô2.jpeg" },
+      { nome: "Casaco listra", imagem: "Casaco listra.jpeg" },
+      { nome: "Vestido em viscolinho", imagem: "Vestido em viscolinho.jpeg" },
+      { nome: "Blazer", imagem: "Blazer.jpeg" },
+    ];
+
+    function criarCardProduto(produto) {
+      const card = document.createElement("div");
+      card.className = "card";
+
+      const img = document.createElement("img");
+      img.src = produto.imagem;
+      img.alt = produto.nome;
+
+      const titulo = document.createElement("h3");
+      titulo.textContent = produto.nome;
+
+      card.appendChild(img);
+      card.appendChild(titulo);
+
+      return card;
+    }
+
+    function carregarProdutos(produtos, containerId) {
+      const container = document.getElementById(containerId);
+      if (!container) {
+        console.error(`Container com id "${containerId}" não encontrado.`);
+        return;
+      }
+
+      container.innerHTML = "";
+
+      produtos.forEach(produto => {
+        const card = criarCardProduto(produto);
+        container.appendChild(card);
+      });
+    }
+
+    carregarProdutos(produtos, "produtos-container");
+  </script>
+
+</body>
+</html>
