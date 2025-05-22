@@ -27,7 +27,7 @@ header {
 }
 
 .logo {
-  height: 3.75rem; /* 60px */
+  height: 3.75rem;
 }
 
 /* ===== Navegação ===== */
@@ -76,7 +76,7 @@ section {
   background: var(--cor-branca);
   border-radius: 8px;
   padding: 1rem;
-  width: 12.5rem; /* 200px */
+  width: 12.5rem;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -108,7 +108,7 @@ section {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 0.75rem 1.25rem; /* 12px 20px */
+  padding: 0.75rem 1.25rem;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
@@ -142,7 +142,7 @@ section {
 
 .whatsapp-button img,
 .instagram-button img {
-  width: 1.5rem; /* 24px */
+  width: 1.5rem;
   height: 1.5rem;
 }
 
@@ -180,13 +180,16 @@ footer {
     text-align: left;
   }
 
+  /* Atualizado para 2 colunas no celular */
   .produtos {
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 1rem;
   }
 
   .card {
-    width: 90%;
+    width: 100%;
   }
 
   .contato-links {
@@ -202,6 +205,10 @@ footer {
 }
 
 @media (max-width: 480px) {
+  .produtos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .card {
     width: 100%;
   }
