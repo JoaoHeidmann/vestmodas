@@ -119,6 +119,11 @@ section {
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
   object-fit: cover;
+  transition: transform 0.3s ease; /* transição suave para o zoom */
+}
+
+.entrada img:hover {
+  transform: scale(1.05); /* leve zoom na imagem */
 }
 
 /* Catálogo de produtos */
@@ -176,7 +181,8 @@ section {
   text-decoration: none;
   width: 200px;
   justify-content: center;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s; /* adicionei transform para zoom */
+  cursor: pointer;
 }
 
 .whatsapp-button {
@@ -186,6 +192,7 @@ section {
 .whatsapp-button:hover,
 .whatsapp-button:focus {
   background-color: #1ebe56;
+  transform: scale(1.05); /* leve zoom no hover */
 }
 
 .instagram-button {
@@ -195,6 +202,7 @@ section {
 .instagram-button:hover,
 .instagram-button:focus {
   opacity: 0.9;
+  transform: scale(1.05); /* leve zoom no hover */
 }
 
 .whatsapp-button img,
