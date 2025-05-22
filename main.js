@@ -2,7 +2,16 @@
 const produtos = [
   { nome: "Vestido em Chamise", imagem: "Vestido em Chamise.jpg" },
   { nome: "Vestido Chamise", imagem: "Vestido Chamise.jpg" },
-  { nome: "Vestido xadrez em viscolinho", imagem: "Vestido xadrez em viscolinho.jpg" }
+  { nome: "Vestido xadrez em viscolinho", imagem: "Vestido xadrez em viscolinho.jpg" },
+  { nome: "Vestido", imagem: "Vestido.jpeg" },
+  { nome: "Vestido eu escolhinho com lastex nas costas", imagem: "Vestido eu escolhinho com lastex nas costas.jpeg" },
+  { nome: "Vestido midi em viscolinho", imagem: "Vestido midi em viscolinho.jpeg" },
+  { nome: "Cardigan em tricô", imagem: "Cardigan em tricô.jpeg" },
+  { nome: "Vestido em viscose", imagem: "Vestido em viscose.jpeg" },
+  { nome: "Cardigan em tricô", imagem: "Cardigan em tricô2.jpeg" },
+  { nome: "Casaco listra", imagem: "Casaco listra.jpeg" },
+  { nome: "Vestido em viscolinho", imagem: "Vestido em viscolinho.jpeg" },
+  { nome: "Blazer", imagem: "Blazer.jpeg" },
 ];
 
 // Função para criar um card de produto
