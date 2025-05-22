@@ -92,8 +92,8 @@ section {
   background: var(--cor-branca);
   border-radius: 8px;
   padding: 1rem;
-  width: 100%;          /* Ajustado para ocupar o espaço da célula */
-  max-width: 12.5rem;   /* Limite máximo para manter tamanho legal */
+  width: 80%;          /* Ajustado para ocupar o espaço da célula */
+  max-width: 20.0rem;   /* Limite máximo para manter tamanho legal */
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -228,10 +228,9 @@ footer {
 }
 
 @media (max-width: 480px) {
-  /* Mantemos 2 colunas no celular */
   .produtos {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 3.0rem; /* aumentei para 1.5rem para espaçamento maior */
     padding: 0 1rem;
   }
 
