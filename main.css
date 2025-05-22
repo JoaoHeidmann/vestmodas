@@ -1,14 +1,25 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #d2b49c; /* Bege claro da logo */
-  color: #1a1a1a;
+:root {
+  --cor-fundo: #d2b49c;
+  --cor-escura: #1a1a1a;
+  --cor-branca: #ffffff;
+  --cor-whatsapp: #25D366;
+  --cor-instagram: #E1306C;
+  --fonte-principal: 'Segoe UI', sans-serif;
 }
 
+/* ===== Reset e Base ===== */
+body {
+  font-family: var(--fonte-principal);
+  margin: 0;
+  padding: 0;
+  background-color: var(--cor-fundo);
+  color: var(--cor-escura);
+}
+
+/* ===== Header ===== */
 header {
-  background-color: #1a1a1a;
-  color: white;
+  background-color: var(--cor-escura);
+  color: var(--cor-branca);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,9 +27,10 @@ header {
 }
 
 .logo {
-  height: 60px;
+  height: 3.75rem; /* 60px */
 }
 
+/* ===== Navegação ===== */
 nav ul {
   list-style: none;
   display: flex;
@@ -28,21 +40,30 @@ nav ul {
 }
 
 nav ul li a {
-  color: white;
+  color: var(--cor-branca);
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
 
-nav ul li a:hover {
-  color: #d2b49c;
+nav ul li a:hover,
+nav ul li a:focus {
+  color: var(--cor-fundo);
+  outline: none;
 }
 
+nav ul li a:focus-visible {
+  outline: 2px solid var(--cor-fundo);
+  outline-offset: 2px;
+}
+
+/* ===== Seções ===== */
 section {
   padding: 2rem;
   text-align: center;
 }
 
+/* ===== Catálogo de Produtos ===== */
 .produtos {
   display: flex;
   flex-wrap: wrap;
@@ -52,12 +73,20 @@ section {
 }
 
 .card {
-  background: white;
+  background: var(--cor-branca);
   border-radius: 8px;
   padding: 1rem;
-  width: 200px;
+  width: 12.5rem; /* 200px */
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .card img {
@@ -65,10 +94,119 @@ section {
   border-radius: 4px;
 }
 
+/* ===== Contato ===== */
+.contato-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.whatsapp-button,
+.instagram-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.75rem 1.25rem; /* 12px 20px */
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  color: var(--cor-branca);
+}
+
+.whatsapp-button {
+  background-color: var(--cor-whatsapp);
+}
+
+.instagram-button {
+  background-color: var(--cor-instagram);
+}
+
+.whatsapp-button:hover,
+.instagram-button:hover,
+.whatsapp-button:focus,
+.instagram-button:focus {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.whatsapp-button:focus-visible,
+.instagram-button:focus-visible {
+  outline: 2px solid var(--cor-fundo);
+  outline-offset: 2px;
+}
+
+.whatsapp-button img,
+.instagram-button img {
+  width: 1.5rem; /* 24px */
+  height: 1.5rem;
+}
+
+/* ===== Footer ===== */
 footer {
-  background-color: #1a1a1a;
-  color: white;
+  background-color: var(--cor-escura);
+  color: var(--cor-branca);
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+    text-align: left;
+  }
+
+  .produtos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .contato-links {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .whatsapp-button,
+  .instagram-button {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+
+  .contato-links {
+    padding: 0 0.5rem;
+  }
 }
